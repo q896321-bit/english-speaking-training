@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment & secrets
+.env
+.env.local
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Conversation logs (may contain personal content — gitignored by default; remove this line if you want to commit them)
+logs/conversations/
+
+# Audio recordings (use git-lfs if you want to track these)
+*.mp3
+*.wav
+*.m4a
