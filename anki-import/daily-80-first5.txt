@@ -1,0 +1,8 @@
+#separator:tab
+#html:false
+#tags column:3
+嘿，最近怎樣？(朋友打招呼，比 "How are you" 更口語)	How's it going?	daily-80 greetings
+怎麼了？/ 最近如何？(打招呼或問狀況)	What's up?	daily-80 greetings
+最近在忙什麼？(比較久沒見的問法)	What have you been up to?	daily-80 greetings
+今天還順利嗎？	How's your day going?	daily-80 greetings
+好久不見	Long time no see	daily-80 greetings

@@ -14,17 +14,24 @@ Day 0 安裝，**最多花 2 小時**。Day 1 開始 routine。
 - [ ] **Python 3.10+** — https://www.python.org/downloads/
   - 安裝時勾「Add to PATH」
   - 驗證: 開 PowerShell 打 `python --version`
+  - **⚠️ 湯凱傑專用備註 (2026-05-31 偵測)**:
+    - `python` (PATH) 指向 Windows Store 偽 stub — 不可用
+    - `py` 啟動器指向 `C:\ProgramData\Anaconda3` — SSL 模組壞了
+    - **可用的**: `C:\Users\KJ\anaconda3\python.exe` (Python 3.13.9，SSL OK)
+    - 跑 practice_partner.py 時用: `& "C:\Users\KJ\anaconda3\python.exe" scripts\practice_partner.py --mode daily`
+    - 或先 `conda activate base` 再用 `python`
 
 - [ ] **Anthropic Python SDK**
   ```powershell
-  pip install anthropic
+  & "C:\Users\KJ\anaconda3\python.exe" -m pip install anthropic
   ```
+  ✅ 已安裝 anthropic 0.105.2 (2026-05-31)
 
 - [ ] **API Key** — https://console.anthropic.com/
   - 註冊帳號 → API Keys → Create Key
-  - 設環境變數（PowerShell）:
+  - **設環境變數（PowerShell，把 sk-ant-... 換成你的 key）**:
     ```powershell
-    [Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-...", "User")
+    [Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-ant-你的key貼這", "User")
     ```
   - **重開 PowerShell 才生效**
   - 驗證: `$env:ANTHROPIC_API_KEY` 應印出 key
